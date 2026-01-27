@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+@layer base {
+  html {
+    @apply text-slate-900 bg-white;
+  }
+
+  body {
+    @apply antialiased text-[16px] leading-7;
+  }
+
+  /* Consistent link styling */
+  a {
+    @apply underline-offset-4;
+  }
+
+  /* Better default focus outline */
+  :focus-visible {
+    @apply outline-none ring-2 ring-slate-400 ring-offset-2 ring-offset-white;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
