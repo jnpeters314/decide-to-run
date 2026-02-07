@@ -99,3 +99,9 @@ export function getMockOffices(params: { state?: string }): Office[] {
     },
   ];
 }
+
+export function getMockOfficeById(officeId: string, params?: { state?: string }): Office | undefined {
+  const offices = getMockOffices({ state: params?.state });
+  return offices.find((o) => o.id === officeId);
+}
+
