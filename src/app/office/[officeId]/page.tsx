@@ -3,6 +3,7 @@ import { Container } from "@/components/layout/Container";
 import { getMockOfficeById } from "@/lib/mock/offices";
 import { SourceLinks } from "@/components/shared/SourceLinks";
 import { ConfidenceBadge } from "@/components/shared/ConfidenceBadge";
+import { RunProfileCard } from "@/components/office/RunProfileCard";
 
 export default async function OfficePage({
   params,
@@ -76,6 +77,7 @@ export default async function OfficePage({
                 <li>Launch your campaign hub and start collecting supporters</li>
               </ul>
             </div>
+            <RunProfileCard level={office.level} />
 
             <div className="rounded-xl border border-slate-200 bg-white p-5">
               <h2 className="text-base font-semibold text-slate-900">
