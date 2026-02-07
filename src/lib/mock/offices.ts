@@ -14,6 +14,17 @@ const OFFICES_CA: Office[] = [
     ],
   },
   {
+    id: "fed-us-senate-ca",
+    name: "U.S. Senate (California)",
+    level: "federal",
+    jurisdiction: "California",
+    cycleYears: [2028],
+    confidence: "verify",
+    sources: [
+      { label: "California Secretary of State — Elections", url: "https://www.sos.ca.gov/elections", publisher: "CA SOS" },
+    ],
+  },
+  {
     id: "state-governor-ca",
     name: "Governor",
     level: "state",
@@ -29,7 +40,7 @@ const OFFICES_CA: Office[] = [
     name: "State Assembly (Your District)",
     level: "state",
     jurisdiction: "California",
-    cycleYears: [2026],
+    cycleYears: [2026, 2028],
     confidence: "verify",
     sources: [
       { label: "California Secretary of State — Elections", url: "https://www.sos.ca.gov/elections", publisher: "CA SOS" },
@@ -69,7 +80,7 @@ export function getMockOffices(params: { state?: string }): Office[] {
       name: "State Legislature (Your District)",
       level: "state",
       jurisdiction: "Your State",
-      cycleYears: [2026],
+      cycleYears: [2026, 2028],
       confidence: "verify",
       sources: [
         { label: "Find your state election office", url: "https://www.usa.gov/state-election-office", publisher: "USA.gov" },
